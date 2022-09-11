@@ -62,7 +62,7 @@ public class Client extends javax.swing.JFrame {
         } catch (Exception ex) {
 
             ex.printStackTrace();
-            txtInfo.setText("Sem conexao com o servidor");
+            txtInfo.setText("Sem conexão com o servidor");
             
 
         }
@@ -131,11 +131,11 @@ public class Client extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Usuario");
+        jLabel2.setText("Usuário");
 
         jLabel3.setText("Senha");
 
-        txtInfo.setText("Usuario nao autenticado");
+        txtInfo.setText("Usuário não autenticado");
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel6.setText("CFC Nosso");
@@ -287,18 +287,18 @@ public class Client extends javax.swing.JFrame {
             if (disponivel) {
 
                 if (!stub.cadastrar(username.getText(), password.getText())) {
-                    txtInfo.setText("Erro ao cadastrar usuario");
+                    txtInfo.setText("Erro ao cadastrar usuário");
                 } else {
-                    txtInfo.setText("Usuario cadastrado com sucesso!");
+                    txtInfo.setText("Usuário cadastrado com sucesso!");
                 }
 
             } else {
-                txtInfo.setText("Este nome de usuario ja esta em uso");
+                txtInfo.setText("Este nome de usuário ja esta em uso");
             }
 
         } catch (RemoteException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-            txtInfo.setText("Sem conexao com o servidor");
+            txtInfo.setText("Sem conexão com o servidor");
         }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
@@ -309,7 +309,7 @@ public class Client extends javax.swing.JFrame {
             String id_user = stub.usuarioOnline(username.getText());
 
             if (!id_user.equals("")) {
-                txtInfo.setText("Este usuario ja esta conectado");
+                txtInfo.setText("Este usuário ja esta conectado");
                 return;
             }
 
@@ -324,7 +324,7 @@ public class Client extends javax.swing.JFrame {
                 btnLogin.setVisible(false);
                 atualizaTabela();
             } else {
-                txtInfo.setText("Nao foi possivel realizar login com as credenciais");
+                txtInfo.setText("Não foi possivel realizar login com as credenciais");
             }
         } catch (RemoteException ex) {
             txtInfo.setText(ex.getMessage());
@@ -365,7 +365,7 @@ public class Client extends javax.swing.JFrame {
             }
 
         } else {
-            txtInfo.setText("Nenhum usuario selecionado");
+            txtInfo.setText("Nenhum usuário selecionado");
         }
 
 
